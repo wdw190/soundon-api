@@ -1,0 +1,14 @@
+logging:
+  level:
+    org.springframework.security: DEBUG
+    
+
+#set the endpoint for getting the public key of the certificate used to sign the token
+security:
+ oauth2:
+   resource:
+     jwt:
+       keyUri: http://localhost:8080/auth/oauth/token_key
+
+server:
+  port: 9090

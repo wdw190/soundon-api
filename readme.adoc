@@ -1,0 +1,7 @@
+
+1、授权节点默认为/oauth/authorize
+2、获取TOKEN节点默认为/oauth/token
+
+3、jwt.ks文件生成名命令如下
+
+keytool -genkeypair -alias jwt -keyalg RSA -dname "CN=SOUNDON, L=XT, S=HN, C=CH" -keypass Soundon318! -keystore jwt.jks -storepass Soundon318!

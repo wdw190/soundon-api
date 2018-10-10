@@ -1,0 +1,31 @@
+server:
+  port: 9999
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+spring:
+  aop:
+    proxy-target-class: true
+
+#set the endpoint for getting the public key of the certificate used to sign the token
+security:
+  oauth2:
+    resource:
+      jwt:
+        keyUri: http://localhost:8080/auth/oauth/token_key
+
+#客户端配置
+resourceServerClient:
+#获取token的API节点
+  accessTokenUri: http://localhost:8080/auth/oauth/token
+#客户端ID
+  clientId: service-account-1
+#客户端密码
+  clientSecret: service-account-1-secret
+#客户端域
+#  scope:
+#客户端验证类型  Http Basic or Form
+#  clientAuthorizationScheme:
+#认证URL
+#  userAuthorizationUri:
